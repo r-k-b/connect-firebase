@@ -8,12 +8,12 @@
     "test": "mocha test/test.js"
   },
   "dependencies": {
-    "firebase": "*"
+    "firebase": "3.0.3"
   },
   "devDependencies": {
-    "should": "*",
-    "mocha": "*",
-    "express-session": "*"
+    "should": "8.4.0",
+    "mocha": "2.5.3",
+    "express-session": "1.13.0"
   },
   "engines": {
     "node": "*"
