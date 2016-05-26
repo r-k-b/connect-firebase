@@ -5,7 +5,8 @@
   "author": "Mike Carson <ca98am79@gmail.com> (http://ca98am79.com)",
   "main": "./index.js",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha test/test.js --bail",
+    "test-debug": "mocha test/test.js --debug --bail"
   },
   "dependencies": {
     "firebase": "3.0.3"

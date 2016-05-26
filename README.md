@@ -20,12 +20,10 @@ connect-firebase is a Firebase session store backed by the [firebase sdk](https:
 
 ```js
 var options = {
+  // refer <https://firebase.google.com/docs/server/setup>
+  serviceAccount: "../serviceAccountCredentials.json",
 
-  // The URL you were given when you created your Firebase
-  host: 'connect-sessions.firebaseio.com',
-
-  // Optional. A Firebase authentication token
-  token: 'qKtOKAQSTCxLFJI7uSeof6H7cfLpSuWYOhqOTQqz',
+  host: "databaseName.firebaseio.com",
 
   // Optional. How often expired sessions should be cleaned up.
   // Defaults to 21600000 (6 hours).
@@ -49,7 +47,7 @@ var session = require('express-session'),
   FirebaseStore = require('connect-firebase')(session);
 app.use(session({
   store: new FirebaseStore(options), 
-  secret: 'keyboard cat' 
+  secret: 'keyboard cat',
   resave: true, 
   saveUninitialized: true
 }));

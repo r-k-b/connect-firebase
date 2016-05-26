@@ -1,6 +1,5 @@
 /* global describe, it, before */
-var host = 'xxx.firebaseio.com';
-var authToken = 'xxxxx';
+var host = process.env.FIREBASE_HOST || 'xxx.firebaseio.com';
 
 var should = require('should'),
     session = require('express-session'),
@@ -13,7 +12,7 @@ describe('FirebaseStore', function () {
         it('should be able to be created', function () {
             var store = new FirebaseStore({
                 host: host,
-                token: authToken
+                serviceAccount: "../serviceAccountCredentials.json"
             });
             store.should.be.an.instanceOf(FirebaseStore);
         });
