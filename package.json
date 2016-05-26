@@ -4,6 +4,9 @@
   "version": "0.0.9",
   "author": "Mike Carson <ca98am79@gmail.com> (http://ca98am79.com)",
   "main": "./index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
   "dependencies": {
     "firebase": "*"
   },
